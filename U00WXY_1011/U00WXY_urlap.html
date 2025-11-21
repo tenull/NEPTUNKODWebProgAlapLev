@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html5 Űrlap U00WXY</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 0;
+      }
+
+      header,
+      footer {
+        text-align: center;
+        padding: 15px;
+      }
+
+      footer{
+        border-top: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+
+      section {
+        width: 60%;
+        margin: 30px auto;
+        padding: 20px;
+        background: #9889ed;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+
+      input,
+      select {
+        width: 60%;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+
+      .buttons {
+        margin-top: 20px;
+      }
+
+      .buttons input {
+        padding: 8px;
+        margin-right: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HTML5 Űrlap – U00WXY</h1>
+    </header>
+
+    <section>
+      <form action="feldolgozo.php" method="get">
+        <label
+          >Név:
+          <input
+            type="text"
+            name="nev"
+            placeholder="Írd be a neved"
+            required
+            autofocus
+          />
+        </label>
+
+        <label
+          >Pin kód:
+          <input
+            type="password"
+            name="pin"
+            placeholder="Írd be a PIN kódot"
+            required
+            pattern="[0-9]{4}"
+          />
+        </label>
+
+        <label
+          >Kedvenc gyümölcs:
+          <input list="gyumik" name="gyumolcs" />
+          <datalist id="gyumik">
+            <option value="Alma 250Ft/kg"></option>
+            <option value="Banán 280Ft/kg"></option>
+            <option value="Körte 300Ft/kg"></option>
+            <option value="Szőlő 600Ft/kg"></option>
+          </datalist>
+        </label>
+
+        <label
+          >Életkor:
+          <input type="number" name="eletkor" min="1" max="100" step="1" />
+        </label>
+
+        <label
+          >Lábméret:
+          <input type="number" name="labmeret" min="25" max="50" step="0.5" />
+        </label>
+
+        <label
+          >Önbizalom:
+          <input type="range" name="onbizalom" min="0" max="100" />
+        </label>
+
+        <div class="buttons">
+          <input type="submit" value="Elküld" />
+          <input type="reset" value="Elküld ellenőrzés nélkül" formnovalidate />
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <p>Forrás: 
+        <a href="https://www.w3schools.com/html/" target="_blank">http://html5doctor.com/</a>
+      </p>
+      <p>Formátumok:<a href="http://html5pattern.com/">http://html5pattern.com/</a></p>
+       <p>JavaScript RegExp:<a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp">https://www.w3schools.com/jsref/jsref_obj_regexp.asp</a></p>
+    </footer>
+  </body>
+</html>
