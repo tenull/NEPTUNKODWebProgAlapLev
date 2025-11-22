@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=play_circle" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=stop_circle" />
+   <style>
+
+        div{
+            display: flex;
+
+        }
+        .grid{
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 1rem;
+            width: 40rem;
+        }
+        footer{
+            border-top: 4px solid gray;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            width: 37.5em;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Video lejátszása_U00WXY</h1>
+</header>
+    
+<section>
+    <video width="600" autoplay="false" controls>
+  <source src="U00WXY_video.mp4" type="video/mp4">
+  <source src="U00WXY_video.mp4" type="video/ogg">
+</video>
+<div class="grid">
+
+
+<div>
+    <div>
+
+            <span id="start" class="material-symbols-outlined">play_circle</span>
+            <span id="stop" class="material-symbols-outlined">stop_circle</span> 
+    </div>
+    <div>
+         <button id="startstop"> indítás/leállítás</button>
+    </div>
+
+</div>
+
+<div>
+    <div>
+        <button id="mute">néma</button>
+        <button id="quite">halk</button>
+        <button id="loud">hangos</button>
+    </div>
+    <div>
+        <button id="veryslow">nagyon lassú</button>
+        <button id="slow">lassú</button>
+        <button id="normal">normál</button>
+        <button id="fast">gyorsabb</button>
+        <button id="veryfast">nagyon gyors</button>
+    </div>
+</div>
+<div>
+    <div>
+        <button id="small">kicsi</button>
+        <button id="normalsize">normál</button>
+        <button id="big">nagy</button>
+    </div>
+    <div>
+        <button id="hasitended">befejeződött-e</button>
+        <button id="length">videó hossza(mo)</button>
+        <button id="currently">jelenlegi pozíció</button>
+    </div>
+</div>
+
+</section>
+
+</div>
+
+    <footer>
+        Forrás: <a href="https://www.w3school.com/html/html5_video.mov">https://www.w3school.com/html/html5_video.mov</a>
+    </footer>
+
+<script>
+    let btnClick = (id,onclick) => document.getElementById(id).addEventListener("click",onclick);
+    //a getelementbyid megkeresi azt az html elemet amelynek az id attributumat video
+
+    const video = document.querySelector("video");
+
+    btnClick("start", ()=>video.play());
+    btnClick("stop",  ()=>video.pause());
+    btnClick("startstop", ()=>video.paused ? video.play() : video.pause());
+
+
+    btnClick("mute", ()=>video.volume = 0);
+    btnClick("quite", ()=>video.volume = 0.5);
+    btnClick("loud", ()=>video.volume = 1);
+
+    btnClick("veryslow", ()=>video.playbackRate = 0.5);
+    btnClick("slow", ()=>video.playbackRate = 0.75);
+    btnClick("normal", ()=>video.playbackRate = 1);
+    btnClick("fast", ()=>video.playbackRate = 1.25);
+    btnClick("veryfast", ()=>video.playbackRate = 1.5);
+
+    btnClick("small", ()=>video.width = 400);
+    btnClick("normalsize", ()=>video.width = 600);
+    btnClick("big", ()=>video.width = 800);
+
+    btnClick("hasitended", ()=>alert(video.ended));
+    btnClick("length", ()=>alert(video.duration));
+    btnClick("currently", ()=>alert(video.currentTime));
+
+
+
+</script>
+
+</body>
+</html>
