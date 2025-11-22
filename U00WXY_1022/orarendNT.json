@@ -1,0 +1,29 @@
+{
+    "U00WXY_orarend":{
+        "ora":[
+            {
+                "targy":"",
+                "idopont":{
+                    "dátum":"2025.11.22",
+                    "tol":10,
+                    "ig":12
+                },
+                "helyszin":"Inf. 124",
+                "oktato":"Dr. Bednarik László",
+                "szak":"G3BIW"
+            },
+             {
+                "targy":"",
+                "idopont":{
+                    "dátum":"2025.11.22",
+                    "tol":10,
+                    "ig":12
+                },
+                "helyszin":"Inf. 103",
+                "oktato":"",
+                "szak":"G3BIW"
+            }
+
+        ]
+    }
+}
