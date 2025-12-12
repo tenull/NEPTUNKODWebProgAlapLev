@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tésztáink</title>
+    <style>
+      header {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      tr {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      a {
+        font-size: large;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+      }
+      .maincontent {
+        width: 80%;
+        height: 300px;
+        border-radius: 10px;
+        background-color: #e03a3a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        font-size: 50px;
+        color: white;
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      h1::after {
+        content: "";
+        width: 80px;
+        height: 4px;
+        background: white;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <table width="100%">
+          <tr>
+            <td><a href="index.html">Főoldal</a></td>
+            <td><a href="bemutatkozas.html">Rólunk</a></td>
+            <td><a href="tesztaink.html">Tésztáink</a></td>
+            <td><a href="kapcsolat.html">Kapcsolat</a></td>
+          </tr>
+        </table>
+      </nav>
+    </header>
+    <main class="main">
+      <div
+        style="display: flex; justify-content: center; align-items: center"
+        class="maincontent"
+      >
+        <div>
+          <h1>Tésztáink</h1>
+        </div>
+      </div>
+    </main>
+    <section style="display: flex; justify-content: center; margin-top: 30px">
+      <div id="products" style="width: 80%"></div>
+    </section>
+    <footer
+      style="
+        display: flex;
+        justify-content: space-around;
+        background-color: #e2e8f0;
+        margin-top: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      "
+    >
+      <div style="text-align: center">
+        <a href="index.html">
+          <img
+            src="képek/pastalogo.jpg"
+            style="border-radius: 50%"
+            width="100px"
+            height="100px"
+            alt=""
+          />
+          <p style="font-weight: bold; margin: 0">Laskodi Tészta</p>
+        </a>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 10px;
+        "
+      >
+        <p style="font-weight: bold; margin: 0">Linkek</p>
+        <a href="index.html">Főoldal</a>
+        <a href="bemutatkozas.html">Rólunk</a>
+        <a href="tesztaink.html">Tésztáink</a>
+        <a href="kapcsolat.html">Kapcsolat</a>
+      </div>
+      <div>
+        <p style="font-weight: bold; margin: 0">Elérhetőségek</p>
+        <p>Cím: Laskod, 4543 Szabadság út 31.</p>
+        <p>Telefon: <a href="+36702334455">+36702334455</a></p>
+        <p>Email: <a href="mailto:asd@asd.hu">asd@asd.hu</a></p>
+      </div>
+    </footer>
+    <script>
+      fetch("tesztaData.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const container = document.getElementById("products");
+
+          data.forEach((category) => {
+            container.innerHTML += `
+          <h2 style="
+            margin-top: 40px;
+            font-size: 30px;
+            text-align: center;
+            color: #e03a3a;
+          ">
+            ${category.name}
+          </h2>
+
+          <div class="teszta-grid">
+            ${category.tesztak
+              .map(
+                (item) => `
+              <div class="teszta-card">
+                <img src="${item.images}" alt="${item.name}">
+                <h3>${item.name}</h3>
+                <p><b>Kiszerelés:</b> ${item.kiszereles}</p>
+                <p><b>Főzési idő:</b> ${item.fozesiIdo}</p>
+                <button class="details-btn">Részletek</button>
+              </div>
+            `
+              )
+              .join("")}
+          </div>
+        `;
+          });
+        });
+    </script>
+
+    <style>
+      .teszta-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        margin-top: 20px;
+      }
+
+      .teszta-card {
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: 0.2s;
+      }
+
+      .teszta-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      }
+
+      .teszta-card img {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+
+      .details-btn {
+        margin-top: 10px;
+        padding: 10px 15px;
+        background: #e03a3a;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .details-btn:hover {
+        background: #9b2626;
+      }
+    </style>
+  </body>
+</html>

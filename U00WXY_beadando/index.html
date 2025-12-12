@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=egg,device_thermostat,done_all,globe_location_pin,handshake"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <title>Tészta</title>
+    <style>
+      body {
+      }
+      header {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      tr {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      a {
+        font-size: large;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+      }
+      .maincontent {
+        width: 80%;
+        height: 400px;
+        border-radius: 10px;
+        background-color: #e2e8f0;
+        display: flex;
+        align-items: center;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      .product-box {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .box {
+        width: 250px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+      .box a {
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+      }
+      .articlediv {
+        width: 80%;
+      }
+      article {
+        display: flex;
+        justify-content: center;
+      }
+      #szolgaltatasok {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .szolgaltatasbox {
+        background: #f8fafc;
+        padding: 25px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .szolgaltatasbox span {
+        font-size: 50px;
+        color: #e03a3a;
+        margin-bottom: 10px;
+      }
+
+      .szolgaltatasbox h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .szolgaltatasbox p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      button {
+        width: 200px;
+        padding: 10px;
+        background-color: rgb(228, 68, 68);
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+      }
+      button a {
+        color: white;
+      }
+      button:hover {
+        background-color: rgb(116, 54, 54);
+      }
+      .video-wrapper {
+        width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .video-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .controls-row {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .controls-row button {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        border: none;
+        background: #e03a3a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.15s;
+        padding: 0;
+      }
+
+      .controls-row button:hover {
+        background: #cbd5e1;
+        transform: translateY(-2px);
+      }
+
+      .material-symbols-outlined {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    </style>
+    <script src="szovegek.json" type="application/json" id="data"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <table width="100%">
+          <tr>
+            <td><a href="index.html">Főoldal</a></td>
+            <td><a href="bemutatkozas.html">Rólunk</a></td>
+            <td><a href="tesztaink.html">Tésztáink</a></td>
+            <td><a href="kapcsolat.html">Kapcsolat</a></td>
+          </tr>
+        </table>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="maincontent">
+        <div style="width: 50%; display: flex; justify-content: center">
+          <img
+            style="border-radius: 50%; width: 250px; height: 250px"
+            src="képek/LTGy-31.jpg"
+            alt=""
+          />
+        </div>
+        <div style="width: 40%">
+          <h1>Üdvözüljük!</h1>
+          <p>
+            A Nyír-Aranytojás Kft. több mint 25 éve gyártja Laskod községben a
+            jól ismert Laskodi Száraztésztákat. Családi vállalkozásként
+            indultunk, azóta is ebben a formában gyártjuk a házias jellegű
+            tésztáinkat.
+          </p>
+          <button><a href="bemutatkozas.html">Rólunk</a></button>
+        </div>
+      </div>
+    </main>
+    <section>
+      <div style="margin-top: 20px" class="product-box">
+        <div
+          style="
+            background-image: url(képek/pasta1.jpg);
+            background-position: center;
+            background-size: cover;
+          "
+          class="box"
+        >
+          <a href="tesztaink.html">4tojásos tészta</a>
+        </div>
+        <div
+          style="
+            background-image: url(képek/pasta2.png);
+            background-position: center;
+            background-size: cover;
+          "
+          class="box"
+        >
+          <a href="tesztaink.html">8 tojásos tészta</a>
+        </div>
+      </div>
+    </section>
+    <aside class="video-wrapper" style="margin-top: 40px;">
+      <div class="video-container">
+        <video width="600" controls>
+          <source src="pastavideo.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="controls-row">
+        <button id="start">
+          <span class="material-symbols-outlined">play_arrow</span>
+        </button>
+        <button id="stop">
+          <span class="material-symbols-outlined">stop</span>
+        </button>
+        <button id="startstop">
+          <span class="material-symbols-outlined">play_pause</span>
+        </button>
+
+        <button id="mute">
+          <span class="material-symbols-outlined">volume_off</span>
+        </button>
+        <button id="quite">
+          <span class="material-symbols-outlined">volume_down</span>
+        </button>
+        <button id="loud">
+          <span class="material-symbols-outlined">volume_up</span>
+        </button>
+
+        <button id="veryslow">
+          <span class="material-symbols-outlined">slow_motion_video</span>
+        </button>
+        <button id="slow">
+          <span class="material-symbols-outlined">speed</span>
+        </button>
+        <button id="normal">
+          <span class="material-symbols-outlined">bolt</span>
+        </button>
+        <button id="fast">
+          <span class="material-symbols-outlined">fast_forward</span>
+        </button>
+
+        <button id="small">
+          <span class="material-symbols-outlined">fullscreen_exit</span>
+        </button>
+        <button id="normalsize">
+          <span class="material-symbols-outlined">filter_frames</span>
+        </button>
+        <button id="big">
+          <span class="material-symbols-outlined">fullscreen</span>
+        </button>
+
+        <button id="hasitended">
+          <span class="material-symbols-outlined">hourglass_bottom</span>
+        </button>
+        <button id="length">
+          <span class="material-symbols-outlined">straighten</span>
+        </button>
+        <button id="currently">
+          <span class="material-symbols-outlined">timer</span>
+        </button>
+      </div>
+    </aside>
+
+    <article>
+      <div class="articlediv">
+        <div id="szolgaltatasok"></div>
+      </div>
+    </article>
+    <footer
+      style="
+        display: flex;
+        justify-content: space-around;
+        background-color: #e2e8f0;
+        margin-top: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      "
+    >
+      <div style="text-align: center">
+        <a href="index.html">
+          <img
+            src="képek/pastalogo.jpg"
+            style="border-radius: 50%"
+            width="100px"
+            height="100px"
+            alt=""
+          />
+          <p style="font-weight: bold; margin: 0">Laskodi Tészta</p>
+        </a>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 10px;
+        "
+      >
+        <p style="font-weight: bold; margin: 0">Linkek</p>
+        <a href="index.html">Főoldal</a>
+        <a href="bemutatkozas.html">Rólunk</a>
+        <a href="tesztaink.html">Tésztáink</a>
+        <a href="kapcsolat">Kapcsolat</a>
+      </div>
+      <div>
+        <p style="font-weight: bold; margin: 0">Elérhetőségek</p>
+        <p>Cím: Laskod, 4543 Szabadság út 31.</p>
+        <p>Telefon: <a href="+36702334455">+36702334455</a></p>
+        <p>Email: <a href="mailto:asd@asd.hu">asd@asd.hu</a></p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    fetch("szovegek.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const container = document.getElementById("szolgaltatasok");
+        data.forEach((item) => {
+          container.innerHTML += `
+          <div class="szolgaltatasbox">
+            <span class="material-symbols-outlined">${item.icon}</span>
+            <h3>${item.title}</h3>
+            <p>${item.text}</p>
+          </div>
+        `;
+        });
+      });
+
+    let btnClick = (id, onclick) =>
+      document.getElementById(id).addEventListener("click", onclick);
+
+    const video = document.querySelector("video");
+
+    btnClick("start", () => video.play());
+    btnClick("stop", () => video.pause());
+    btnClick("startstop", () => (video.paused ? video.play() : video.pause()));
+
+    btnClick("mute", () => (video.volume = 0));
+    btnClick("quite", () => (video.volume = 0.5));
+    btnClick("loud", () => (video.volume = 1));
+
+    btnClick("veryslow", () => (video.playbackRate = 0.5));
+    btnClick("slow", () => (video.playbackRate = 0.75));
+    btnClick("normal", () => (video.playbackRate = 1));
+    btnClick("fast", () => (video.playbackRate = 1.25));
+    btnClick("veryfast", () => (video.playbackRate = 1.5));
+
+    btnClick("small", () => (video.width = 400));
+    btnClick("normalsize", () => (video.width = 600));
+    btnClick("big", () => (video.width = 800));
+
+    btnClick("hasitended", () => alert(video.ended));
+    btnClick("length", () => alert(video.duration));
+    btnClick("currently", () => alert(video.currentTime));
+  </script>
+</html>

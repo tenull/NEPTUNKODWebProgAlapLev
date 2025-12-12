@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <title>Kapcsolat</title>
+    <style>
+      body {
+      }
+      header {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      tr {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      a {
+        font-size: large;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+      }
+      .maincontent {
+        width: 80%;
+        height: 300px;
+        border-radius: 10px;
+        background-color: #e03a3a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        font-size: 50px;
+        color: white;
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      h1::after {
+        content: "";
+        width: 80px;
+        height: 4px;
+        background: white;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        border-radius: 2px;
+      }
+      input {
+        width: 300px;
+        padding: 5px;
+        margin: 5px;
+      }
+      textarea {
+        width: 645px;
+        height: 300px;
+      }
+      button {
+        width: 200px;
+        padding: 10px;
+        background-color: rgb(228, 68, 68);
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+      }
+      button:hover {
+        background-color: rgb(116, 54, 54);
+      }
+
+      .error {
+        border: 2px solid red;
+      }
+
+      .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <table width="100%">
+          <tr>
+            <td><a href="index.html">Főoldal</a></td>
+            <td><a href="bemutatkozas.html">Rólunk</a></td>
+            <td><a href="tesztaink.html">Tésztáink</a></td>
+            <td><a href="kapcsolat.html">Kapcsolat</a></td>
+          </tr>
+        </table>
+      </nav>
+    </header>
+    <main class="main">
+      <div
+        style="display: flex; justify-content: center; align-items: center"
+        class="maincontent"
+      >
+        <div>
+          <h1>Kapcsolat</h1>
+        </div>
+      </div>
+    </main>
+    <section style="display: flex; justify-content: center">
+      <div style="width: 80%; display: flex; flex-wrap: wrap">
+        <div style="width: 50%">
+          <div>
+            <p>Cím</p>
+            <div style="display: flex; align-items: center">
+              <span class="material-symbols-outlined"> location_on </span>
+              <p>Laskod, 4543 Szabadság út 31.</p>
+            </div>
+          </div>
+          <div>
+            <p>Nyitvatartás</p>
+            <div style="display: flex; align-items: center">
+              <span class="material-symbols-outlined"
+                >nest_clock_farsight_analog</span
+              >
+              <p>Hétfőtől-Szombatig 6 - 16</p>
+            </div>
+          </div>
+          <div>
+            <p>Elérhetőségek</p>
+            <div style="display: flex; align-items: center">
+              <span class="material-symbols-outlined">call</span>
+              <p><a href="+tel:+36703233345">+36703233345</a></p>
+            </div>
+            <div style="display: flex; align-items: center">
+              <span class="material-symbols-outlined">mail</span>
+              <p><a href="mailto:email@email.com">email@email.com</a></p>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+          "
+        >
+          <p style="text-align: justify">
+            Amennyiben érdekli együttműködési lehetőség cégünkkel, vagy további
+            kérdése van, kérjük, vegye fel velünk a kapcsolatot az alábbi
+            elérhetőségeken!
+          </p>
+
+          <div>
+            <form id="contactForm" novalidate>
+              <div style="display: flex; gap: 10px">
+                <div class="input-group">
+                  <input id="lastname" placeholder="Vezetéknév" type="text" />
+                  <div class="error-message"></div>
+                </div>
+
+                <div class="input-group">
+                  <input id="firstname" placeholder="Keresztnév" type="text" />
+                  <div class="error-message"></div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 10px">
+                <div class="input-group">
+                  <input id="email" placeholder="Email cím" type="email" />
+                  <div class="error-message"></div>
+                </div>
+
+                <div class="input-group">
+                  <input id="phone" placeholder="Telefonszám" type="number" />
+                  <div class="error-message"></div>
+                </div>
+              </div>
+
+              <div
+                class="input-group"
+                style="display: flex; justify-content: center"
+              >
+                <textarea id="message" placeholder="Üzenet"></textarea>
+                <div class="error-message"></div>
+              </div>
+
+              <div
+                style="display: flex; justify-content: center; margin-top: 20px"
+              >
+                <button type="submit">Küldés</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      style="
+        display: flex;
+        justify-content: space-around;
+        background-color: #e2e8f0;
+        margin-top: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      "
+    >
+      <div style="text-align: center">
+        <a href="index.html">
+          <img
+            src="képek/pastalogo.jpg"
+            style="border-radius: 50%"
+            width="100px"
+            height="100px"
+            alt=""
+          />
+          <p style="font-weight: bold; margin: 0">Laskodi Tészta</p>
+        </a>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 10px;
+        "
+      >
+        <p style="font-weight: bold; margin: 0">Linkek</p>
+        <a href="index.html">Főoldal</a>
+        <a href="bemutatkozas.html">Rólunk</a>
+        <a href="tesztaink.html">Tésztáink</a>
+        <a href="kapcsolat">Kapcsolat</a>
+      </div>
+      <div>
+        <p style="font-weight: bold; margin: 0">Elérhetőségek</p>
+        <p>Cím: Laskod, 4543 Szabadság út 31.</p>
+        <p>Telefon: <a href="+36702334455">+36702334455</a></p>
+        <p>Email: <a href="mailto:asd@asd.hu">asd@asd.hu</a></p>
+      </div>
+    </footer>
+
+    <script>
+      const form = document.getElementById("contactForm");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let isValid = true;
+
+        function validateField(id, message) {
+          const input = document.getElementById(id);
+          const errorDiv = input.nextElementSibling;
+
+          if (!input.value.trim()) {
+            input.classList.add("error");
+            errorDiv.textContent = message;
+            isValid = false;
+          } else {
+            input.classList.remove("error");
+            errorDiv.textContent = "";
+          }
+        }
+
+        validateField("lastname", "Kérjük add meg a vezetékneved!");
+        validateField("firstname", "Kérjük add meg a keresztneved!");
+        validateField("email", "Kérjük adj meg egy érvényes email címet!");
+        validateField("phone", "Kérjük add meg a telefonszámod!");
+        validateField("message", "Kérjük írj üzenetet!");
+
+
+        if (isValid) {
+          alert("Sikeresen elküldve!");
+          form.reset();
+        }
+      });
+    </script>
+  </body>
+</html>

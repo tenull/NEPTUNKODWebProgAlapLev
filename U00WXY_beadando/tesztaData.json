@@ -1,0 +1,156 @@
+[
+  {
+    "name": "4 Tojásos Levestészta",
+    "link": "/termekeink/4tojasoslevesteszta",
+    "tesztak": [
+      {
+        "name": "Cérnametélt",
+        "packingOf": 4,
+        "useOf": "Leves",
+        "images": "képek/cernametelt8tojasos.jpg",
+        "kiszereles": "250g",
+        "fozesiIdo": "4-5perc",
+        "Összetevők": "búzaliszt, tyúktojás",
+        "description": "A tarhonya egy igazán hagyományos magyar tésztafajta. Nagy felületének köszönhetően, sok szaftot szed fel.",
+        "csomagolas": "lakossagi",
+        "tapertek": [
+          {
+            "energia": "1644 kJ / 389 kcal",
+            "zsir": "4,62 g",
+            "telitettzsir": "1,48 g",
+            "szenhidrat": "70,48 g",
+            "cukor": "2,74 g",
+            "feherje": "14,67 g",
+            "so": "0,153 g"
+          }
+        ]
+      },
+      {
+        "name": "Szélesmetélt",
+        "packingOf": 4,
+        "useOf": "Leves",
+        "images": "képek/epercsik8tojasos.png",
+        "kiszereles": "250g",
+        "fozesiIdo": "4-5perc",
+        "Összetevők": "búzaliszt, tyúktojás",
+        "csomagolas": "gyujto",
+        "tapertek": [
+          {
+            "energia": "1644 kJ / 389 kcal",
+            "zsir": "4,62 g",
+            "telitettzsir": "1,48 g",
+            "szenhidrat": "70,48 g",
+            "cukor": "2,74 g",
+            "feherje": "14,67 g",
+            "so": "0,153 g"
+          }
+        ]
+      },
+      {
+        "name": "Eperlevél",
+        "packingOf": 4,
+        "useOf": "Leves",
+        "images": "képek/hazicsiga8tojasos.jpg",
+        "kiszereles": "250g",
+        "fozesiIdo": "4-5perc",
+        "Összetevők": "búzaliszt, tyúktojás",
+        "tapertek": [
+          {
+            "energia": "1644 kJ / 389 kcal",
+            "zsir": "4,62 g",
+            "telitettzsir": "1,48 g",
+            "szenhidrat": "70,48 g",
+            "cukor": "2,74 g",
+            "feherje": "14,67 g",
+            "so": "0,153 g"
+          }
+        ]
+      }
+    ]
+  },
+   {
+    "name": "8 Tojásos Levestészta",
+    "link": "képek/cernametelt8tojasos.jpg",
+    "tesztak": [
+      {
+        "name": "Cérnametélt",
+        "packingOf": 8,
+        "useOf": "Leves",
+        "images": "képek/szelesmetelt.png",
+        "kiszereles": "200g",
+        "fozesiIdo": "4-5perc",
+        "Összetevők": "búzaliszt, tyúktojás",
+        "tapertek": [
+          {
+            "energia": "1644 kJ / 389 kcal",
+            "zsir": "4,62 g",
+            "telitettzsir": "1,48 g",
+            "szenhidrat": "70,48 g",
+            "cukor": "2,74 g",
+            "feherje": "14,67 g",
+            "so": "0,153 g"
+          }
+        ]
+      },
+       {
+        "name": "Cérnametélt",
+        "packingOf": 8,
+        "useOf": "Leves",
+        "images": "képek/szelesmetelt.png",
+        "kiszereles": "200g",
+        "fozesiIdo": "4-5perc",
+        "Összetevők": "búzaliszt, tyúktojás",
+        "tapertek": [
+          {
+            "energia": "1644 kJ / 389 kcal",
+            "zsir": "4,62 g",
+            "telitettzsir": "1,48 g",
+            "szenhidrat": "70,48 g",
+            "cukor": "2,74 g",
+            "feherje": "14,67 g",
+            "so": "0,153 g"
+          }
+        ]
+      },
+       {
+        "name": "Cérnametélt",
+        "packingOf": 8,
+        "useOf": "Leves",
+        "images": "képek/szelesmetelt.png",
+        "kiszereles": "200g",
+        "fozesiIdo": "4-5perc",
+        "Összetevők": "búzaliszt, tyúktojás",
+        "tapertek": [
+          {
+            "energia": "1644 kJ / 389 kcal",
+            "zsir": "4,62 g",
+            "telitettzsir": "1,48 g",
+            "szenhidrat": "70,48 g",
+            "cukor": "2,74 g",
+            "feherje": "14,67 g",
+            "so": "0,153 g"
+          }
+        ]
+      }, {
+        "name": "Cérnametélt",
+        "packingOf": 8,
+        "useOf": "Leves",
+        "images": "képek/szelesmetelt.png",
+        "kiszereles": "200g",
+        "fozesiIdo": "4-5perc",
+        "Összetevők": "búzaliszt, tyúktojás",
+        "tapertek": [
+          {
+            "energia": "1644 kJ / 389 kcal",
+            "zsir": "4,62 g",
+            "telitettzsir": "1,48 g",
+            "szenhidrat": "70,48 g",
+            "cukor": "2,74 g",
+            "feherje": "14,67 g",
+            "so": "0,153 g"
+          }
+        ]
+      }
+    ]
+  }
+]
